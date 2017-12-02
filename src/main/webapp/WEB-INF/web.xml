@@ -23,7 +23,7 @@
   <filter>
     <display-name>AdminFilter</display-name>
     <filter-name>AdminFilter</filter-name>
-    <filter-class>com.epam.vladkazakov.filters.AdminFilter</filter-class>
+    <filter-class>com.vladkazakov.filters.AdminFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>AdminFilter</filter-name>

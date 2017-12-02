@@ -10,7 +10,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
 	<annotation-driven />
-    <context:component-scan base-package="com.epam.vladkazakov" />
+    <context:component-scan base-package="com.vladkazakov" />
 	<resources mapping="/static/**" location="/static/" />
 	<resources mapping="/resources/**" location="/resources/" />
 	<resources mapping="/resources/js/**" location="/resources/js/" />
@@ -18,12 +18,6 @@
 	<resources mapping="/resources/images/**" location="/resources/images/" />
 	<resources mapping="/resources/fonts/**" location="/resources/fonts/" />
 
-	<!--  <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<beans:property name="prefix" value="/WEB-INF/views/" />
-		<beans:property name="suffix" value=".jsp" />
-	</beans:bean> -->
-<!--	<beans:bean id="multipartResolver"
-      class="org.springframework.web.multipart.commons.CommonsMultipartResolver" /> -->
 
 <beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
  <beans:property name="maxUploadSize" value="268435456"/>
@@ -32,12 +26,12 @@
 <beans:bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<beans:property name="entityManagerFactory" ref="entityManagerFactory" />
 	</beans:bean>
-<jpa:repositories base-package="com.epam.vladkazakov.repositories" />
+<jpa:repositories base-package="com.vladkazakov.repositories" />
 	
 	<beans:bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<beans:property name="dataSource" ref="dataSource" />
-		<beans:property name="packagesToScan" value="com.epam.vladkazakov" />
+		<beans:property name="packagesToScan" value="com.vladkazakov" />
 		<beans:property name="jpaVendorAdapter">
 			<beans:bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
 				<beans:property name="generateDdl" value="true" />
